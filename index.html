@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Bayamma!</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #702b58;
+      background: linear-gradient(135deg, #ffe0ef, #e8dcff);
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      width: 100%;
+      max-width: 500px;
+      padding: 30px 22px;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px #ad78a333;
+    }
+
+    h1 {
+      color: #df4388;
+    }
+
+    .cake {
+      font-size: 75px;
+      animation: bounce 1.2s infinite alternate;
+    }
+
+    @keyframes bounce {
+      to { transform: translateY(-10px); }
+    }
+
+    button {
+      background: #e84d97;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 14px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    button:hover {
+      background: #c92f7b;
+    }
+
+    #surprise, #finalWish {
+      display: none;
+      line-height: 1.8;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    #finalWish {
+      text-align: center;
+      background: #fff0f7;
+      padding: 18px;
+      border-radius: 18px;
+    }
+
+    .hearts {
+      font-size: 25px;
+    }
+
+    .signature {
+      text-align: center;
+      font-weight: bold;
+      color: #c92f7b;
+    }
+
+    /* Birthday video styling */
+    .birthday-video {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: 18px auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px #ad78a333;
+      background: #f8dce9;
+    }
+
+    .video-title {
+      color: #df4388;
+      margin-top: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+
+    <div class="hearts">💗 ✨ 💗</div>
+    <div class="cake">🎂</div>
+
+    <h1>Happy Birthday!</h1>
+    <h2>My Dear BahimaSaliha 🫶</h2>
+    <p>Today is all about YOU! 💖</p>
+
+    <button onclick="openSurprise()">
+      Open Your Surprise 💌
+    </button>
+
+    <section id="surprise">
+      <h2 style="text-align:center">🎉 A Special Letter for You 🎉</h2>
+
+      <p><strong>Happiest Birthday, Dear Bayamma! ❤️🎂</strong></p>
+
+      <p>Hi Bayamma! 🫶💗</p>
+
+      <p>
+        I wanted to do something special just for you.
+        I thought a lot about what gift I could buy for you
+        or what I could make for you, but I couldn't come
+        up with anything. So, I decided to do something
+        a little different and created this special website
+        just for you! 🥹💖
+      </p>
+
+      <p>
+        I don't really know how to express everything I want
+        to say, but one thing I truly wish for is that you
+        always stay happy. Not just today, but every single
+        day of your life. We all want to see you happy,
+        smiling, and enjoying every moment of your life. ❤️
+      </p>
+
+      <p>
+        You deserve so much happiness, love, and all the
+        beautiful things life has to offer. May all your
+        dreams come true, and may God always guide you,
+        protect you, and bless you with endless happiness. ✨
+      </p>
+
+      <p>
+        Once again, the happiest birthday to you,
+        dear Bayamma! 🥳🎂
+      </p>
+
+      <p>
+        <strong>
+          Stay happy, keep smiling, and always be the
+          wonderful person you are! 💗
+        </strong>
+      </p>
+
+      <p class="signature">
+        With lots of love,<br>
+        From me and all our friends 🫂❤️
+      </p>
+
+      <div style="text-align:center">
+        <button onclick="openFinalWish()">
+          One Last Surprise 💖
+        </button>
+      </div>
+
+      <section id="finalWish">
+        <div class="hearts">💗 🌷 💗</div>
+        <h2>For You, Bayamma! 🥹</h2>
+
+        <p>
+          May your life always be filled with happiness,
+          love, laughter, and beautiful memories.
+          Never stop smiling, because your happiness
+          means so much to all of us! Once again,
+          happiest birthday! ❤️
+        </p>
+
+        <h3>God Bless You Always! 🙏💖</h3>
+        <p><strong>Happiest Birthday Once Again! 🎂🎉</strong></p>
+
+        <div class="hearts">💕 💖 🫶 💖 💕</div>
+
+        <!-- Birthday video starts here -->
+        <h3 class="video-title">A Special Video Just for You 🎬💗</h3>
+
+        <video class="birthday-video" controls playsinline preload="metadata">
+          <source src="birthday.mp4" type="video/mp4">
+          Your browser does not support this video.
+        </video>
+
+        <p>
+          Made with lots of love, just for you! 🫂❤️
+        </p>
+        <!-- Birthday video ends here -->
+
+      </section>
+    </section>
+
+  </main>
+
+  <script>
+    function openSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+
+    function openFinalWish() {
+      document.getElementById("finalWish").style.display = "block";
+
+      // Scroll to the final surprise
+      document.getElementById("finalWish").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  </script>
+</body>
+</html>
